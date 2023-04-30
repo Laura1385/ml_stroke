@@ -58,6 +58,14 @@ def bar_graphics(df, column, title, rotation=None, ax=None, y_max=3000):
     ax.spines['bottom'].set_visible(True)
     
 
+#new coloumn
+def sport(row):
+    if row['smoking_status'] != 'never smoked' and row['age'] < 65 and row['hypertension'] == 0:
+        return 1
+    else:
+        return 0
+    
+
 #Correlation_matrix's graphic
 def correlation_matrix(df, title):
     data = df
